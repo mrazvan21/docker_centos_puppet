@@ -17,4 +17,9 @@ RUN if [ ! -f /etc/sysconfig/network ]; then touch /etc/sysconfig/network; fi
 RUN yum -y install puppet-server
 RUN yum -y install puppet
 
+RUN yum -y install vim
+
+RUN yum -y install python-setuptools
+RUN easy_install supervisor
+
 ADD puppet.conf /etc/puppet/puppet.conf
